@@ -1,0 +1,164 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+  padding: 30px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.well {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 15px 0;
+  padding: 15px;
+}
+
+[class*=icon] {
+  vertical-align: middle;
+}
+
+.add-icon, .cog-icon, .cross-icon, .page-icon, .pencil-icon {
+  background-image: url('../images/icons-s49b4bee48c.png');
+  background-repeat: no-repeat;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .add-icon, .cog-icon, .cross-icon, .page-icon, .pencil-icon {
+    background-image: url('../images/icons@2x-sf3fbadd349.png');
+    background-repeat: no-repeat;
+    -webkit-background-size: 16px 90px;
+    -moz-background-size: 16px 90px;
+    -o-background-size: 16px 90px;
+    background-size: 16px 90px;
+  }
+}
+
+.add-icon {
+  background-position: 0 0;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .add-icon {
+    background-position: 0 1px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.cog-icon {
+  background-position: 0 -16px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .cog-icon {
+    background-position: 0 -18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.cross-icon {
+  background-position: 0 -32px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .cross-icon {
+    background-position: 0 -55px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.page-icon {
+  background-position: 0 -48px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .page-icon {
+    background-position: 0 -73px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.pencil-icon {
+  background-position: 0 -64px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .pencil-icon {
+    background-position: 0 -36px;
+    width: 18px;
+    height: 18px;
+  }
+}

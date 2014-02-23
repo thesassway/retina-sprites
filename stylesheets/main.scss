@@ -1,0 +1,80 @@
+@import "compass";
+
+@include global-reset;
+
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+  padding: 30px;
+  font-size: 13px;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.well {
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  margin: 15px 0;
+  padding: 15px;
+}
+
+[class*=icon] { vertical-align: middle; }
+
+$icons: sprite-map("icons/*.png", $layout: 'smart');
+$icons2x: sprite-map("icons@2x/*.png", $spacing: 5px);
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+%sprite {
+  background-image: sprite-url($icons);
+  background-repeat: no-repeat;
+
+  @include retina {
+    background-image: sprite-url($icons2x);
+    background-repeat: no-repeat;
+    $sprite-width: image-width(sprite-path($icons2x)) / 2;
+    $sprite-height: image-height(sprite-path($icons2x)) / 2;
+    @include background-size($sprite-width $sprite-height);
+  }
+}
+
+@mixin retina-sprite ( $icon ) {
+  $icon-name: "icons/" + $icon + '.png';
+  $position: sprite-position($icons, $icon);
+  $position-x: round(nth($position, 1));
+  $position-y: round(nth($position, 2));
+  background-position: $position-x $position-y;
+  display: inline-block;
+  width: image-width($icon-name);
+  height: image-height($icon-name);
+  @extend %sprite;
+
+  @include retina {
+    $icon-name: "icons@2x/" + $icon + '.png';
+    $position: sprite-position($icons2x, $icon);
+    $position-x: round(nth($position, 1)/2);
+    $position-y: round(nth($position, 2)/2) + 1px;
+    background-position: $position-x $position-y;
+    width: round(image-width($icon-name) / 2) + 2;
+    height: round(image-height($icon-name) / 2) + 2;
+  }
+}
+
+.add-icon    { @include retina-sprite(add); }
+.cog-icon    { @include retina-sprite(cog); }
+.cross-icon  { @include retina-sprite(cross); }
+.page-icon   { @include retina-sprite(page); }
+.pencil-icon { @include retina-sprite(pencil); }
